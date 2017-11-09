@@ -1,10 +1,10 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using symptomdiagnosis;
 using System.IO;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using System.Linq;
 using System;
+using symptomdiagnosisui.service;
 
 namespace diagnosistest
 {

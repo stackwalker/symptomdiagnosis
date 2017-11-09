@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace symptomdiagnosis
+namespace symptomdiagnosisui.service
 {
     public class Condition
     {
