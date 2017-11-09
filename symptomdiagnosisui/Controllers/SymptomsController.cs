@@ -34,7 +34,7 @@ namespace symptomdiagnosisui.Controllers
             var evaluator = new SymptomEvaluator(encounterSet);
             var aggregator = new EncounterAggregator();
             var data = evaluator.GetDiagnoses(reportedSymptoms);
-            var response = new { results = aggregator.aggregateEncounters(data), data = data };
+            var response = new { results = aggregator.aggregateEncounters(data), data = data.Take(100) };
             return Ok(JsonConvert.SerializeObject(response));
         }
     }
