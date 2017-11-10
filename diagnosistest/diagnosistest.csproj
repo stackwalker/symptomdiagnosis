@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\symptomdiagnosis\symptomdiagnosis.csproj" />
+    <ProjectReference Include="..\symptomdiagnosisui\symptomdiagnosisui.csproj" />
   </ItemGroup>
 
   <ItemGroup>

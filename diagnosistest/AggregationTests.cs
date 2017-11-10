@@ -1,5 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using symptomdiagnosis;
+using symptomdiagnosisui.service;
 using System.IO;
 using System.Collections.Generic;
 using Newtonsoft.Json;
