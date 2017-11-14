@@ -33,13 +33,14 @@ namespace SymptomDiagnosis.Controllers
 
             var syms = req["reportedSymptoms"] as JArray;
 
-            var reportedSymptoms = (from s in syms select new Condition { Name = (string)s["Name"] }).ToArray<Condition>();
+            var reportedSymptoms = (from s in syms select new Condition { Name = (string)s["name"] }).ToArray<Condition>();
 
             var evaluator = new SymptomEvaluator(encounterSet);
             var aggregator = new EncounterAggregator();
             var data = evaluator.GetDiagnoses(reportedSymptoms);
             var response = new { results = aggregator.aggregateEncounters(data), data = data.Take(100) };
-            return Ok(JsonConvert.SerializeObject(response));
+            //return Ok(JsonConvert.SerializeObject(response));
+            return Ok(response);
         }
     }
 }

@@ -6,7 +6,7 @@ class ResultList extends React.Component {
       <div>
         {
           this.props.results && this.props.results.map(dx => {
-            return <li key={dx.Name}>{dx.Name}</li>
+            return <li key={dx.name}>{dx.name}</li>
           })
         }
       </div>

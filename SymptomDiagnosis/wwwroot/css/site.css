@@ -1,1 +1,7 @@
-﻿
+﻿svg {width: 20px; height: 20px; margin-left: 10px;}
+.close-x {
+    stroke: black;
+    fill: transparent;
+    stroke-linecap: round;
+    stroke-width: 5;
+}

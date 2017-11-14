@@ -26,7 +26,7 @@ class Form extends React.Component {
 
     const input = this.input
     const newSx = this.state.symptoms.slice()
-    newSx.push(input.value)
+    newSx.push({ name: input.value })
     
     input.value = ''
     
@@ -37,10 +37,11 @@ class Form extends React.Component {
 
   onDeleteSymptom(sx) {
     const newSx = this.state.symptoms.filter(function (symptom) {
-      return symptom !== sx
+      return symptom.name !== sx
     })
 
     this.setState({symptoms: newSx})
+    this.props.onChange(this.state.numberOfResults, newSx)
   }
 
 
@@ -50,9 +51,9 @@ class Form extends React.Component {
         {this.state.symptoms.map(symptom => {
           return (
             <li>
-              {symptom}
-              <svg viewBox="0 0 40 40" onClick={function(){this.onDeleteSymptom(symptom)}.bind(this)}>
-                <path class="close-x" d="M 10,10 L 30,30 M 30,10 L 10,30" />
+              {symptom.name}
+              <svg viewBox="0 0 40 40" onClick={function(){this.onDeleteSymptom(symptom.name)}.bind(this)}>
+                <path className="close-x" d="M 10,10 L 30,30 M 30,10 L 10,30" />
               </svg>
             </li>
           )
