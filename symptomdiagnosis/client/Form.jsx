@@ -48,9 +48,9 @@ class Form extends React.Component {
   renderSymptoms() {
     return (
       <ul>
-        {this.state.symptoms.map(symptom => {
+        {this.state.symptoms.map((symptom, i) => {
           return (
-            <li>
+            <li key={"symtom_" + i}>
               {symptom.name}
               <svg viewBox="0 0 40 40" onClick={function(){this.onDeleteSymptom(symptom.name)}.bind(this)}>
                 <path className="close-x" d="M 10,10 L 30,30 M 30,10 L 10,30" />
