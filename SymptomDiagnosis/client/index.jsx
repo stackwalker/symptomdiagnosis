@@ -4,10 +4,6 @@ import { render } from 'react-dom'
 import Form from './Form.jsx'
 import ResultList from './ResultList.jsx'
 
-const styles = {
-  fontFamily: 'sans-serif'
-}
-
 class App extends React.Component {
   constructor(props) {
     super(props)
@@ -46,18 +42,21 @@ class App extends React.Component {
   }
 
 
-  render() {
-    console.log(this.state)      
+  render() {    
     return (
-      <div style={styles}>
+      <div className="container">
 
-        <Form onChange={this.getDx} />
-
-        <ResultList
-          results={this.state.results}
-          data={this.state.data}
-        />
-
+        <div className="row">
+          <div className="column column-25">
+            <Form onChange={this.getDx} />
+          </div>
+          <div className="column">
+            <ResultList
+              results={this.state.results}
+              data={this.state.data}
+            />
+          </div>
+        </div>
       </div>
     )
   }
