@@ -38,14 +38,11 @@ class App extends React.Component {
     } else {
         this.setState({ results: [], data: []})
     }
-
   }
 
-
-  render() {    
+  render() {
     return (
       <div className="container">
-
         <div className="row">
           <div className="column column-25">
             <Form onChange={this.getDx} />
