@@ -11,19 +11,11 @@ class ResultList extends React.Component {
       <div>
         {
           this.props.results && this.props.results.map(dx => {
-            return <li key={dx.name}>{dx.name}</li>
-          })
-        }
-      </div>
-
-      <div>
-        {
-          this.props.results && this.props.results.map(dx => {
-            const opacity = scale(dx.Count, 0.25, 1, this.props.results[this.props.results.length-1].Count, this.props.results[0].Count)
+            const opacity = scale(dx.count, 0.5, 1, this.props.results[this.props.results.length-1].count, this.props.results[0].count)
             // JavaScript laughing in the face of its strongly typed relatives:
             const fontSize = opacity * 48 + 'px'
 
-            return <li style={{ opacity: opacity, fontSize: fontSize}} key={dx.name}>{dx.name}</li>
+            return <li style={{ opacity: opacity, fontSize: fontSize }} key={dx.name}>{dx.name} ({dx.count})</li>
           })
         }
       </div>
