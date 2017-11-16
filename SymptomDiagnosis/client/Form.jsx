@@ -66,17 +66,24 @@ class Form extends React.Component {
   render() {
     return (
       <div>
-        <select onChange={this.onSelectChange} value={this.state.numberOfResults}>
-          <option value="10">10</option>
-          <option value="100">100</option>
-          <option value="1000">1000</option>
-          <option value="10000">10000</option>
-        </select>
+        <label>
+          Data set:
+          <select onChange={this.onSelectChange} value={this.state.numberOfResults}>
+            <option value="10">10</option>
+            <option value="100">100</option>
+            <option value="1000">1000</option>
+            <option value="10000">10000</option>
+          </select>
+        </label>
 
         <form onSubmit={this.onInputSubmit}>
-          <input type="text" ref={function(input) {this.input = input}.bind(this)} />
+          <label>
+            Enter symptom:
+            <input type="text" ref={function(input) {this.input = input}.bind(this)} />
+          </label>
         </form>
 
+        {this.state.symptoms.length ? <h4>Matching Diagnoses</h4> : null}
         {this.renderSymptoms()}
       </div>
     )

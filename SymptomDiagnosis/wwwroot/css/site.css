@@ -12,7 +12,8 @@ li {
 
 .bar {
   display: block;
-  border: 1px solid #ccc;
+  border: 1px solid #555;
+  border-radius: 3px;
   color: #fff;
   font-weight: 700;
   background: #5a87d7;

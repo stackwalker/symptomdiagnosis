@@ -8,7 +8,7 @@ class DataList extends React.Component {
           this.props.data && this.props.data.map((dx,i) => {
             return (
               <li key={i}>
-                    {dx.name} ({dx.similarityIndex})
+                {dx.name} ({ (dx.similarityIndex + '').substring(0, 4) })
               </li>
             )
           })
@@ -19,4 +19,3 @@ class DataList extends React.Component {
 }
 
 export default DataList
-

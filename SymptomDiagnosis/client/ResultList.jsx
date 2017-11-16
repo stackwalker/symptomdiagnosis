@@ -10,6 +10,9 @@ class ResultList extends React.Component {
     return (
       <div>
         {
+          this.props.results && this.props.results.length ? <h4>Matching Diagnoses</h4> : null
+        }
+        {
           this.props.results && this.props.results.map(dx => {
             const width = scale(dx.count, 5, 100, this.props.results[this.props.results.length - 1].count, this.props.results[0].count)
 
