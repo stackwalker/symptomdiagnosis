@@ -66,6 +66,8 @@ class Form extends React.Component {
   render() {
     return (
       <div>
+        <h4>HWatson</h4>
+
         <label>
           Data set:
           <select onChange={this.onSelectChange} value={this.state.numberOfResults}>
