@@ -83,7 +83,7 @@ class Form extends React.Component {
           </label>
         </form>
 
-        {this.state.symptoms.length ? <h4>Matching Diagnoses</h4> : null}
+        {this.state.symptoms.length ? <h4>Symptoms</h4> : null}
         {this.renderSymptoms()}
       </div>
     )
