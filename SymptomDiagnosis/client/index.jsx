@@ -3,6 +3,7 @@ import { render } from 'react-dom'
 
 import Form from './Form.jsx'
 import ResultList from './ResultList.jsx'
+import DataList from './DataList.jsx'
 
 class App extends React.Component {
   constructor(props) {
@@ -52,6 +53,11 @@ class App extends React.Component {
               results={this.state.results}
               data={this.state.data}
             />
+          </div>
+        </div>
+        <div className="row">
+          <div className="column">
+            <DataList data={this.state.data}/>
           </div>
         </div>
       </div>

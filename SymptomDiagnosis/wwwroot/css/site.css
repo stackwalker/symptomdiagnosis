@@ -13,7 +13,9 @@ li {
 .bar {
   display: block;
   border: 1px solid #ccc;
-  background: #ccc;
+  color: #fff;
+  font-weight: 700;
+  background: #5a87d7;
   transition: all .75s ease-in-out;
   text-indent: 5px;
 }
